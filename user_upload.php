@@ -22,4 +22,8 @@ if (isset($options['help'])) {
     exit;
 }
 
+// Check that a valid file exists or print out an error message
+if (!!file_exists($options['file'])) {
+    die("Error: Please provide a valid CSV file using the --file option.\n");
+}
 ?>
