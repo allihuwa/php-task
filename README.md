@@ -27,3 +27,12 @@ This PHP script allows you to process a CSV file and insert its data into a MySQ
   -p - MySQL password.
   -h - MySQL host.
   --help - Display help message with a list of directives.
+
+  # Foobar Script
+
+  ### Usage 
+
+  simply run the script:
+
+  ```bash
+   php foobar.php
