@@ -5,9 +5,6 @@ $username = 'default_username';
 $password = 'default_password';
 $database = 'default_database';
 
-// Define command line options
-$options = getopt("u:p:h:", ["file:", "create_table", "dry_run", "help"]);
-
 while (true) {
 	echo "Enter a command (type '--help' for help, or 'exit' to quit): ";
 	$stdin = trim(fgets(STDIN));
@@ -39,12 +36,12 @@ while (true) {
 
 	// Set MySQL user
 	elseif ($command[0] === '-u') {
-			$username = $options['u'];
+			$username = $command[1];
 	}
 
 	// Set MySQL password
 	elseif ($command[0] === '-p') {
-			$password = $options['p'];
+			$password = $command[1];
 	}
 
 	// Create or rebuild the MySQL users table if --create_table option is specified
